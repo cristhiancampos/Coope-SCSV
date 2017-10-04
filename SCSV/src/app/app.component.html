@@ -1,8 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<body>
-    
+<div>
+  <router-outlet></router-outlet>
   <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
     <div class="container-fluid">
       <a [routerLink]="['/']" class="navbar-brand logoMenu" href="#" (click)="validarSolicitudSada(false)"><img src="assets/img/logo.png"></a>
@@ -23,73 +20,70 @@
       </div>
     </div>
   </nav>
+</div>
 <!-- <solicitud-sala *ngIf="isSolicitudSala"></solicitud-sala> -->
-   
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="4000" *ngIf="!isSolicitudSala">
-        <router-outlet></router-outlet>
-      <div class="intro-message " style="margin-top:20em;background-color: transparent;position: absolute;z-index: 333; left: 35%;text-align:center;">
-        <h1 style="color: #fff">SAVE</h1>
-        <h3 style="color: #fff;">Sistema de Control de Salas y Vehiculos</h3>
-        <hr class="intro-divider" style="background-color: #fff">
-        <ul class="list-inline intro-social-buttons">
-          <li class="list-inline-item">
-            <a routerLink="/solicitud" (click)="validarSolicitudSada(true)" class="btn  btn-lg btnIndex"> 
-                <i class="fa fa-users" aria-hidden="true"></i>
-                <span class="network-name" >Salas</span>
-              </a>
-          </li>
-          <li class="list-inline-item">
-            <a href="#" class="btn  btn-lg btnIndex">
-                <i class="fa fa-car" aria-hidden="true"></i>
-                <span class="network-name">Vehiculos</span>
-              </a>
-          </li>
-        </ul>
-      </div>
-      
 
-      <ol class="carousel-indicators">
-        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-      </ol>
-      <div class="carousel-inner" role="listbox">
-        <!-- Slide One - Set the background image for this slide in the line below -->
-        <div class="carousel-item active" style="background-image: url('assets/img/image03.jpg')">
-          <div class="carousel-caption d-none d-md-block">
-          </div>
-        </div>
-        <!-- Slide Two - Set the background image for this slide in the line below -->
-        <div class="carousel-item" style="background-image: url('assets/img/image02.jpg')">
-          <div class="carousel-caption d-none d-md-block">
-          </div>
-        </div>
-        <!-- Slide Three - Set the background image for this slide in the line below -->
-        <div class="carousel-item" style="background-image: url('assets/img/image04.jpg')">
-          <div class="carousel-caption d-none d-md-block">
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="4000" *ngIf="!isSolicitudSala">
+  <router-outlet></router-outlet>
+  <div class="intro-message " style="margin-top:20em;background-color: transparent;position: absolute;z-index: 333; left: 35%;text-align:center;">
+    <h1 style="color: #fff">SAVE</h1>
+    <h3 style="color: #fff;">Sistema de Control de Salas y Vehiculos</h3>
+    <hr class="intro-divider" style="background-color: #fff">
+    <ul class="list-inline intro-social-buttons">
+      <li class="list-inline-item">
+        <a (click)="validarSolicitudSada(true)" class="btn  btn-lg btnIndex"> 
+          <i class="fa fa-users" aria-hidden="true"></i>
+          <span class="network-name" >Salas</span>
+        </a>
+      </li>
+      <li class="list-inline-item">
+        <a href="#" class="btn  btn-lg btnIndex">
+          <i class="fa fa-car" aria-hidden="true"></i>
+          <span class="network-name">Vehiculos</span>
+        </a>
+      </li>
+    </ul>
+  </div>
 
-          </div>
-        </div>
-        <div class="carousel-item" style="background-image: url('assets/img/image05.jpg')">
-          <div class="carousel-caption d-none d-md-block">
 
-          </div>
-        </div>
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+  </ol>
+  <div class="carousel-inner" role="listbox">
+    <!-- Slide One - Set the background image for this slide in the line below -->
+    <div class="carousel-item active" style="background-image: url('assets/img/image03.jpg')">
+      <div class="carousel-caption d-none d-md-block">
       </div>
     </div>
-
-
-
-
-  <!-- Footer -->
-  <footer class="py-5 " style="background-color: #fff;">
-      <div class=" container ">
-        <p class="m-0 text-center text-black ">&copy; Coopesparta R.L.</p>
+    <!-- Slide Two - Set the background image for this slide in the line below -->
+    <div class="carousel-item" style="background-image: url('assets/img/image02.jpg')">
+      <div class="carousel-caption d-none d-md-block">
       </div>
-      <!-- /.container -->
-    </footer>
-   
-  </body>
+    </div>
+    <!-- Slide Three - Set the background image for this slide in the line below -->
+    <div class="carousel-item" style="background-image: url('assets/img/image04.jpg')">
+      <div class="carousel-caption d-none d-md-block">
 
-</html>
+      </div>
+    </div>
+    <div class="carousel-item" style="background-image: url('assets/img/image05.jpg')">
+      <div class="carousel-caption d-none d-md-block">
+
+      </div>
+    </div>
+  </div>
+</div>
+<div style="margin-top: 6%" *ngIf="isSolicitudSala">
+    <app-solicitud></app-solicitud>
+</div>
+
+
+<footer class="py-5 " style="background-color: #fff;">
+  <div class=" container ">
+    <p class="m-0 text-center text-black ">&copy; Coopesparta R.L.</p>
+  </div>
+
+</footer>

@@ -11,6 +11,7 @@ import { SolicitudComponent } from './solicitud/solicitud.component';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
