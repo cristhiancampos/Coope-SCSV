@@ -21,7 +21,12 @@
   <script src="assets/vendor/popper/popper.min.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
   <script>
-     $(".btnIndex").click(function () {
+    $(".btnIndex").hover(function(){
+    $(this).css("background-color", "green");
+    }, function(){
+    $(this).css("background-color", "pink");
+});
+   /*  $(".btnIndex").click(function () {
       console.log( "sobon" );
      });
       $(".btnIndex").hover(function () {
@@ -32,7 +37,7 @@
         $(this).css("color ", "#ffcf01 ");
         $(this).css("background-color ", "#0082c8 ");
         console.log( "ready!........." );
-      });
+      });*/
     </script>
 </body>
 </html>
