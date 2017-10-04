@@ -7,6 +7,7 @@ import {FormsModule} from '@angular/forms';
 import { AppComponent } from './app.component';
 import { SolicitudSalas } from './solicitudSalas/solicitudSalas.component';
 import { SolicitudComponent } from './solicitud/solicitud.component';
+import { RegistroUsuarioComponent } from './registro-usuario/registro-usuario.component';
 
 
 
@@ -17,6 +18,7 @@ import { SolicitudComponent } from './solicitud/solicitud.component';
     AppComponent,
     SolicitudSalas,
     SolicitudComponent,
+    RegistroUsuarioComponent,
     
   ],
   imports: [
