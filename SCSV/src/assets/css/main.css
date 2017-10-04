@@ -30,3 +30,8 @@
   margin-left: 2px;
 }
 
+@media only screen and (max-width: 992px) and (min-width: 621px) {  
+  .navbar-expand-lg .navbar-collapse {
+    display: block;
+  }
+}  
