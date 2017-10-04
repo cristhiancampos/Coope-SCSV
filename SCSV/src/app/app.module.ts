@@ -12,6 +12,7 @@ import { RegistroUsuarioComponent } from './registro-usuario/registro-usuario.co
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
